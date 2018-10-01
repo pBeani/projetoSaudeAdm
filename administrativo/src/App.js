@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import Login from './containers/Login/Login';
-
+import LoginForm from './containers/LoginForm/LoginForm';
+import { Route, Switch } from 'react-router-dom';
 class App extends Component {
 
   render() {
-    return <Login></Login>
+    return (
+      <Switch>
+        <Route path='/teste' render={ () => <div>Teste</div> }></Route>
+        <Route path='/' component={LoginForm}></Route>
+      </Switch>
+    )
   }
 }
 

@@ -12,11 +12,17 @@ class LoginForm extends Component {
         pwd: ''    
     };
 
+    doLogin = () => {
+        //Verificar se usuário existe
+        this.props.history.push('/teste');
+    }
+
     submitLogin = () => {
         const { cpf, pwd } = { ...this.state };
 
         const hasCpf = cpf.trim('').length > 0;
         const hasPwd = pwd.trim('').length > 0;
+
         if (!hasCpf && !hasPwd) {
             window.alert('Informe seu documento e senha para prosseguir.');
         } else if (!hasCpf) {
@@ -24,18 +30,17 @@ class LoginForm extends Component {
         } else if (!hasPwd) {
             window.alert('Informe sua senha para prosseguir.');
         } else {
-            window.alert("Logado com sucesso");
+            this.doLogin();
         }
     }
 
     onChangeHandler = (target, value) => {
         let updatedState = { ...this.state };
         updatedState[target] = value;
-        this.setState({...updatedState});
+        this.setState(updatedState);
     }
 
     render() {
-
         const { cpf, pwd } = { ...this.state };
 
         return (
