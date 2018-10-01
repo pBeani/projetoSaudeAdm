@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-
-import classes from './App.css';
+import Login from './containers/Login/Login';
 
 class App extends Component {
 
   render() {
-    return null
+    return <Login></Login>
   }
 }
 

@@ -1,0 +1,25 @@
+.Input {
+    position: relative;
+}
+
+.Label {
+    display: block;
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.Text, .Password {
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    color: lightgray;
+}
+
+.Text:focus, .Password:focus {
+    outline: none;
+    transition: all 0.2s ease-out;
+    border-bottom: 1px solid royalblue;
+}

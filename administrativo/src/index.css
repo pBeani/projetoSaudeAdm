@@ -1,5 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+  background: #c6d1ff; /* Old browsers */
+  background: -moz-linear-gradient(90deg, #9fffff  0%, #c6d1ff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(90deg, #9fffff  0%,#c6d1ff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(90deg, #9fffff  0%,#c6d1ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+body > div{
+  height: 100%;
 }

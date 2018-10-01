@@ -1,0 +1,11 @@
+.Login {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 500px;
+    background: white;
+    border-radius: 10px 10px 20px 20px;
+    box-shadow: 5px 5px 20px 0 lightsteelblue;
+}

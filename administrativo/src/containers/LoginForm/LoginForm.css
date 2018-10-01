@@ -1,0 +1,17 @@
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+
+.LoginForm div:last-child {
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.LoginForm > div:first-child {
+    margin-top: 20px;
+}
