@@ -1,0 +1,37 @@
+.col-6 {
+    width: 50%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .col-sm-12 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+}

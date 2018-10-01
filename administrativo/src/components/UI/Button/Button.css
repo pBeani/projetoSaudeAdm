@@ -1,0 +1,17 @@
+.Button {
+    height: 40px;
+    color: white;
+    background: royalblue;
+    padding: 5px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid royalblue;
+}
+
+.Button:hover {
+    transition: all .2s ease-out;
+    color: royalblue;
+    background: white
+}

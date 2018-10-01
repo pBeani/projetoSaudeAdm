@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-
-import classes from './App.css';
-
+import LoginForm from './containers/LoginForm/LoginForm';
+import { Route, Switch } from 'react-router-dom';
 class App extends Component {
 
   render() {
-    return null
+    return (
+      <Switch>
+        <Route path='/teste' render={ () => <div>Teste</div> }></Route>
+        <Route path='/' component={LoginForm}></Route>
+      </Switch>
+    )
   }
 }
 
