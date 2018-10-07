@@ -14,7 +14,7 @@ class LoginForm extends Component {
 
     doLogin = () => {
         //Verificar se usuário existe
-        this.props.history.push('/teste');
+        this.props.history.push('/home');
     }
 
     submitLogin = () => {
@@ -65,7 +65,7 @@ class LoginForm extends Component {
                         clicked={this.submitLogin}>Entrar</Button>
                 </Line>
             </div>
-        );
+        )
     }
 }
 
