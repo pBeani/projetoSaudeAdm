@@ -8,14 +8,14 @@ const MainContent = props => {
     let section = null;
 
     // por enquanto, colocar esse valor manualmente para cair no case do componente que vai desenvolver
-    switch (props.screen) {
+    switch ('cadastroUnidade') {
 
         case 'listaUnidades':
-            section = ListaUnidades;
+            section = <ListaUnidades />;
             break;
 
         case 'cadastroUnidade':
-            section = CadastroUnidade;
+            section = <CadastroUnidade />;
             break;
 
         default: 
