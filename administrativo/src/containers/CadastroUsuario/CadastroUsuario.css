@@ -1,0 +1,21 @@
+.CadastroUsuario {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: white;
+    border-radius: 10px 10px 20px 20px;
+    box-shadow: 5px 5px 10px 0 #9abae3;
+}
+
+.CadastroUsuario div:last-child {
+    justify-content: flex-end;
+}
+
+.CadastroUsuario > div:first-child {
+    margin-top: 20px;
+}

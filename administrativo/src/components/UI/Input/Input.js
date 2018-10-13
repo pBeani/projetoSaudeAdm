@@ -7,6 +7,19 @@ const input = props => {
     switch (props.type) {
 
         case 'select':
+            inputElement = <select
+                value={props.value}
+                className={classes.Select}
+                onChange={props.changed} >
+                    {props.options.map(option => (
+                        <option
+                            key={option.value}
+                            value={option.value} >
+                            {option.displayValue}
+                        </option>
+                ))}
+            </select>
+            break;
         case 'textarea':
             break;
 
@@ -17,7 +30,7 @@ const input = props => {
                 onChange={props.changed}
                 className={classes.Password} />
             break;
-
+        case 'date':
         default:
             inputElement = <input
                 type="text"

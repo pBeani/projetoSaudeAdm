@@ -3,7 +3,7 @@ import classes from './Col.css';
 
 const col = props => {
 
-    const colClasses = props.className.split(' ');
+    const colClasses = props.className ? props.className.split(' ') : [];
     const classList = [];
 
     for (let i = 0; i < colClasses.length; i++) {
