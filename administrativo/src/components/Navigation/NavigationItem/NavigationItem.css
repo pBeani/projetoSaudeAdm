@@ -1,0 +1,15 @@
+.Item {
+    padding: 10px 0;
+}
+
+.Item a {
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    padding: 10px 40px;
+}
+
+.Item a:hover {
+    background: lightsteelblue;
+    color: white;
+}

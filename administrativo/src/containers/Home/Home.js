@@ -8,11 +8,10 @@ class Home extends Component {
     state = {};
 
     render () {
-
         return(
             <div className={classes.Home}>
-                <Menu />
-                <MainContent />
+                <Menu path={this.props.match.path} />
+                <MainContent path={this.props.match.path} />
             </div>
         )
     }

@@ -15,6 +15,8 @@ const nano = require('nano')('http://localhost:5984');
 
 class CadastroUsuario extends Component {
     
+    
+    
     state = {
         form: {
             nome: {
@@ -39,8 +41,8 @@ class CadastroUsuario extends Component {
             },
             sexo: {
                 type: 'select',
-                label: 'Nome',
-                value: sexData[0].value,
+                label: 'Sexo',
+                value: '',
                 options: sexData
             },
             nascimento: {
@@ -51,7 +53,7 @@ class CadastroUsuario extends Component {
             estado: {
                 type: 'select',
                 label: 'Estado',
-                value: stateData[0].value,
+                value: '',
                 options: stateData
             },
             cidade: {
@@ -77,7 +79,7 @@ class CadastroUsuario extends Component {
             telefone: {
                 type: 'text',
                 label: 'Telefone',
-                value: ''
+                value:''
             },
             cartao: {
                 type: 'text',
@@ -87,7 +89,7 @@ class CadastroUsuario extends Component {
             tipo: {
                 type: 'select',
                 label: 'Tipo de Usuário',
-                value: typeData[0].value,
+                value: '',
                 options: typeData,
                 customChange: (e) => {
                     this.userTypeChanged(e)
@@ -157,7 +159,6 @@ class CadastroUsuario extends Component {
     }
 
     onChangeHandler = (event, key) => {
-        console.log(event, ' - ', key)
 
         let updatedForm = {
             ...this.state.form
@@ -179,9 +180,44 @@ class CadastroUsuario extends Component {
         });
     }
 
+    initializeUser = () => {
+        const user = this.props.location.state ? this.props.location.state.user : {};
+        const newUser = { ... this.state.form };
+
+        for (let key in newUser) {
+            debugger
+            let newField = { ...newUser[key]};
+            newField.value = user[key] || '';
+            newUser[key] = newField;
+        }
+
+        this.setState({ form: newUser }, this.userTypeChanged)
+    }
+
+    clearUser = () => {
+        const newUser = { ... this.state.form };
+
+        for (let key in newUser) {
+            let newField = { ...newUser[key]};
+            newField.value = '';
+            newUser[key] = newField;
+        }
+
+        this.setState({ form: newUser }, this.userTypeChanged)
+    }
+
+    componentDidMount() {
+        this.initializeUser();
+    }
+
+    componentDidUpdate(prevProps) {
+        if(this.props.location.state !== prevProps.location.state) {
+            this.clearUser();
+        }
+    }
+
     render() {
         let formElements = [];
-
         for (let key in this.state.form) {
             formElements.push({
                 key: key,

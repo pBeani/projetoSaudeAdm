@@ -7,13 +7,21 @@ const input = props => {
     switch (props.type) {
 
         case 'select':
+
+            const emptyOption = {
+                value: '',
+                displayValue: 'Selecione'
+            };
+
+            props.options.splice(0, 0, emptyOption);
+
             inputElement = <select
                 value={props.value}
                 className={classes.Select}
                 onChange={props.changed} >
                     {props.options.map(option => (
                         <option
-                            key={option.value}
+                            key={option.value === '' ? Math.random() : option.value}
                             value={option.value} >
                             {option.displayValue}
                         </option>
