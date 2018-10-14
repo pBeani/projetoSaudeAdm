@@ -1,0 +1,44 @@
+.UserList {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 500px;
+    background: white;
+    border-radius: 10px 10px 20px 20px;
+    box-shadow: 5px 5px 10px 0 #9abae3;
+    margin: 0 auto;
+}
+
+.UserList h1 {
+    font-size: 1.5em;
+}
+
+.User {
+    border-radius: 10px;
+    padding: 0 10px;
+    border: 1px solid lightsteelblue;
+    cursor: pointer;
+    transition: .2s all ease-out;
+    margin-bottom: 20px;
+}
+
+.User:last-child {
+    margin-bottom: 0;
+}
+
+.User:hover {
+    background: lightsteelblue;
+    color: white;
+}
+
+.User h4 {
+    margin: 10px 0;
+}
+
+.Type {
+
+}
+
+.Info {
+    
+}

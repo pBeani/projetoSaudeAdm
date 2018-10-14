@@ -9,7 +9,7 @@
     margin-bottom: 5px;
 }
 
-.Text, .Password {
+.Text, .Password, .Select {
     border: none;
     border-bottom: 1px solid gray;
     width: 100%;
