@@ -4,6 +4,8 @@ import ListaUnidades from '../../containers/ListaUnidades/ListaUnidades';
 import CadastroUnidade from '../../containers/CadastroUnidade/CadastroUnidade';
 import CadastroUsuario from '../../containers/CadastroUsuario/CadastroUsuario';
 import ListaUsuarios from '../../containers/ListaUsuarios/ListaUsuarios';
+import DadosUnidade from '../../containers/DadosUnidade/DadosUnidade';
+
 import { Switch, Route, withRouter } from 'react-router-dom';
 
 const MainContent = props => {
@@ -40,6 +42,7 @@ const MainContent = props => {
                 <Route path={path + '/cadastroUnidade'} component={CadastroUnidade} />
                 <Route path={path + '/listaUsuarios'} component={ListaUsuarios} />
                 <Route path={path + '/cadastroUsuario'} component={CadastroUsuario} />
+                <Route path={path + '/dadosUnidade'} component={DadosUnidade} />
                 <Route path={path} render={() => <section>Default</section>} />
             </Switch>
         </main>
