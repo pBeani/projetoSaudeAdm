@@ -4,12 +4,12 @@
 
 .Item a {
     text-decoration: none;
-    color: lightgray;
+    color: #5E5E5E;
     display: block;
     padding: 10px 40px;
 }
 
 .Item a:hover {
-    background: lightsteelblue;
+    background: #2499BF;
     color: white;
 }
